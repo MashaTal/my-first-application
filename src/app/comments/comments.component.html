@@ -1,0 +1,20 @@
+<h3>Comments:</h3>
+<div class="comments">
+<div *ngIf="posts">
+  <ul>
+    <li *ngFor="let comment of comments">
+      <div>
+        <p class="name" (click)="getInput(comment)" *ngIf="!isSelected(comment?.id)">
+            {{comment.name}}
+        </p>
+        <input #inputComment type="text" [(ngModel)]="comment.name" *ngIf="isSelected(comment?.id)" class="input-comment">
+        <p (click)="getInput(comment)" *ngIf="!isSelected(comment?.id)">{{comment.body}}</p>
+        <textarea #textareaComment [(ngModel)]="comment.body" *ngIf="isSelected(comment?.id)" class="input-textarea"></textarea>
+        <button *ngIf="isSelected(comment?.id)"  (click)="save(input.value , textarea.value)">save</button>
+        <button *ngIf="isSelected(comment?.id)" (click)="delete()">delete</button>
+        <p>{{comment.email}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>

@@ -1,0 +1,48 @@
+h2 {
+    font-family: 'Notable', sans-serif; 
+    word-spacing: 2px;
+    color: rgb(107, 106, 106);
+ }
+
+ .name {
+    font-weight: bold;
+    font-family: 'Doppio One', sans-serif;
+    font-size: 1.1em;
+} 
+
+ul {
+    padding-left:10px;
+}
+
+.post-body {
+    display:flex;
+}
+.text-posts {
+    flex:1;
+    padding: 0 20px;
+}
+.comments {
+    flex:1;
+    padding: 0 20px;
+    border-left: 1px solid rgb(167, 167, 167);
+    height: 1000px;
+}
+.edit-post h3 {
+    font-family: 'Notable', sans-serif; 
+    word-spacing: 2px;
+}
+h4 {
+    font-weight: bold;
+    font-family: 'Doppio One', sans-serif;
+    font-size: 1.1em;
+}
+button {
+    height: 30px;
+    width: 80px;
+    margin-top: 10px;
+}
+
+input,textarea {
+    width: 508px;
+    font-size: 15px;
+}

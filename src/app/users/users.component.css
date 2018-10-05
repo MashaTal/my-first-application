@@ -1,0 +1,36 @@
+h2 {
+    font-family: 'Notable', sans-serif; 
+    word-spacing: 2px;
+    color: rgb(107, 106, 106);
+ }
+ .name {
+     font-weight: bold;
+     font-family: 'Doppio One', sans-serif;
+     font-size: 1.3em;
+     color: rgb(167, 167, 167);
+ } 
+
+.container {
+    display:flex;
+    border-bottom: 1px solid rgb(167, 167, 167);
+    border-top: 1px solid rgb(167, 167, 167);
+}
+
+.user-list {
+    flex:1;
+    padding: 0 20px;
+    background-color: #F5F5F5;
+    border-right: 1px solid  rgb(167, 167, 167); 
+}
+
+.user-post {
+    flex:4;
+}
+
+ul {
+    padding-left:15px;
+}
+.info {
+    color:rgb(41, 41, 41);
+    font-family: 'Doppio One', sans-serif;
+}

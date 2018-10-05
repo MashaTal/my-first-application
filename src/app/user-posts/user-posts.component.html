@@ -1,0 +1,30 @@
+<div class="post-body">
+  <div class="text-posts">
+      <h2>posts:</h2>
+    <div *ngIf="user">
+      <ul>
+        <li *ngFor="let post of posts" (click)="onSelectPost(post)" >
+          <p class="name">{{post.title}}</p>
+          <p>{{post.body}}</p>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div class="comments">
+        <div class="edit-post">
+            <h2>Editing and adding posts: </h2>
+            <div>
+            <h4>Post title: </h4>
+            <input #titlePost [(ngModel)]="value.title" placeholder="title"/>
+            <h4>Text: </h4>
+            <textarea #textPost name="text" id="" cols="70" rows="10" [(ngModel)]="value.body" placeholder="text"></textarea>
+            <div>
+            <button (click)="save()">Save</button>
+            <button (click)="add(titlePost.value, textPost.value, user.id)">Add</button>
+            <button (click)= "delete()">Delete</button>
+            </div>
+            </div>
+          </div>
+      <app-comments [posts]="selectedPost" [comments]="comments" [user]="user"></app-comments>
+    </div>
+  </div>

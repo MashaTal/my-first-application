@@ -1,0 +1,16 @@
+<div class="container">
+<div class="user-list">
+<h2>Users list: </h2>
+<ul class="users-list">
+    <li *ngFor="let user of users" [class.selected]="user === selectedUser" (click)="onSelect(user)">
+      <div>
+      <p class="name">{{user.username}}</p>
+      <p class="info">Id: {{user.id}}, Name: {{user.name}}</p>
+      </div>
+    </li>
+</ul>
+</div>
+<div class="user-post">
+<app-user-posts [user] ="selectedUser" [posts]="posts" ></app-user-posts>
+</div>
+</div>
